@@ -21,3 +21,6 @@ test-remote-image:
 
 update-image:
 	docker push irkin42/nodos_app
+
+bash:
+	docker-compose run app bash

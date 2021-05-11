@@ -17,7 +17,8 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./site:/srv
       - caddy_data:/data
       - caddy_config:/config
 
@@ -28,13 +29,14 @@ services:
     ports:
       - 8080:8080
     command: npm start
+    volumes:
+      - .:/usr/src
     depends_on:
       - caddy
       - db
 
 volumes:
   pgdata:
-  caddyfile:
   caddy_data:
   caddy_config:
-  
+
