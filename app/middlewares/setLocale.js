@@ -1,3 +1,3 @@
 /* @ts-check */
 
-export default (next, request, response, app) => next();
+export default (next, _request, _response, _app) => next();

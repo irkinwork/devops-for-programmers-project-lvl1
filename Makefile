@@ -4,6 +4,9 @@ server:
 test:
 	docker run irkin42/nodos_app npx jest
 
+lint:
+	docker run irkin42/nodos_app npx eslint . --fix
+
 clean:
 	docker system prune --volumes
 
