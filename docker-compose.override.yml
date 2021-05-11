@@ -1,6 +1,15 @@
 ---
 
 services:
+  db:
+    container_name: nodos_db
+    image: postgres:latest
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: nodos_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
   caddy:
     image: caddy:latest
     restart: unless-stopped
@@ -21,8 +30,10 @@ services:
     command: npm start
     depends_on:
       - caddy
+      - db
 
 volumes:
+  pgdata:
   caddyfile:
   caddy_data:
   caddy_config:
