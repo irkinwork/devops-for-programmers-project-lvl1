@@ -1,5 +1,6 @@
 /* @ts-check */
 
-export default async (request, response) => {
+/* eslint-disable-next-line no-unused-vars */
+export default async (_request, _response) => {
 
 };

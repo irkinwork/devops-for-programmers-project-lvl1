@@ -1,9 +1,11 @@
-FROM node:14
+FROM node:14.6
 
-WORKDIR /usr/src
+WORKDIR /app
 
-COPY package.json package.json
-COPY package-lock.json package-lock.json
+COPY package*.json ./
+
 RUN npm i
-COPY . /usr/src
+
+COPY . .
+
 CMD ["npm", "start"]
