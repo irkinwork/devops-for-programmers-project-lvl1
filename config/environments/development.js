@@ -2,7 +2,6 @@
 /* eslint-disable no-param-reassign */
 
 import nodosWebpack from '@nodosjs/webpack-extension';
-import { node } from 'webpack';
 
 export default async (app) => {
   app.addExtension(nodosWebpack);
@@ -12,5 +11,6 @@ export default async (app) => {
 
   app.config.db = {
     type: process.env.NODOS_DB_TYPE,
+    hostname: process.env.NODOS_DB_HOSTNAME,
   };
 };

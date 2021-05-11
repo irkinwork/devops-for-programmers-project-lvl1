@@ -1,3 +1,4 @@
 /* @ts-check */
 
-export default (next, request, response, app) => next();
+/* eslint-disable-next-line no-unused-vars */
+export default (next, _request, _response, _app) => next();

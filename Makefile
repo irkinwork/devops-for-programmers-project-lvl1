@@ -4,14 +4,17 @@ server:
 test:
 	docker run irkin42/nodos_app npx jest
 
+lint:
+	docker run irkin42/nodos_app npx eslint . --fix
+
 clean:
-	docker system prune --volumes
+	docker-compose down -v --remove-orphans
 
 compose-build:
-	docker-compose --file docker-compose.override.yml build
+	docker-compose build
 
 docker-build-prod:
-	docker build . -f Dockerfile.production -t irkin42/nodos_app
+	docker build . -f Dockerfile.production -t irkin42/nodos_app:latest
 
 up:
 	docker-compose up --abort-on-container-exit
@@ -24,3 +27,6 @@ update-image:
 
 bash:
 	docker-compose run app bash
+
+submit:
+	git add . && git ci --amend -m "fix hexlet-check" && git push -u origin HEAD -f
