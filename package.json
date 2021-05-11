@@ -18,13 +18,13 @@
     "@nodosjs/cli": "^0.0.57",
     "@nodosjs/core": "^0.0.57",
     "@nodosjs/db-typeorm-extension": "^0.0.57",
+    "@nodosjs/jest-environment": "0.0.57",
     "@nodosjs/view-extension": "^0.0.57",
     "@nodosjs/webpack-extension": "^0.0.57",
-    "sql.js": "^1.5.0",
-    "pg": "^8.5.1"
+    "pg": "^8.5.1",
+    "sql.js": "^1.5.0"
   },
   "devDependencies": {
-    "@nodosjs/jest-environment": "^0.0.57",
     "babel-jest": "^26.3.0",
     "eslint": "^7.22.0",
     "eslint-plugin-babel": "^5.3.1",
