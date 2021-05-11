@@ -1,6 +1,8 @@
-FROM node:14
+FROM node:14.6
 
-WORKDIR /usr/src
+WORKDIR /app
 
-COPY . /usr/src
+COPY . .
+RUN npm i
+
 CMD ["npm", "start"]
