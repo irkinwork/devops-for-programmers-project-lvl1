@@ -1,6 +1,9 @@
-FROM node:14
+FROM node:14.6
 
-WORKDIR /usr/src
+WORKDIR /app
 
-COPY . /usr/src
+RUN npm i
+RUN npm i -g @nodosjs/cli@0.0.55
+COPY . .
+
 CMD ["npm", "start"]

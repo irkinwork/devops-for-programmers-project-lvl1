@@ -2,7 +2,6 @@
 /* eslint-disable no-param-reassign */
 
 import nodosWebpack from '@nodosjs/webpack-extension';
-import { node } from 'webpack';
 
 export default async (app) => {
   app.addExtension(nodosWebpack);
